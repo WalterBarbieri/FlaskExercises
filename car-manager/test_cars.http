@@ -1,0 +1,65 @@
+### Aggiungi una nuova auto
+POST http://127.0.0.1:5000/api/cars
+Content-Type: application/json
+
+{
+    "name": "Lancia Lambda",
+    "color": "Blue",
+    "price": 40000.00,
+    "available": true
+}
+
+### Recupera tutte le auto
+GET http://127.0.0.1:5000/api/cars
+
+### Recupera Auto per ID
+GET http://127.0.0.1:5000/api/cars/2
+
+### Conta Auto
+GET http://127.0.0.1:5000/api/cars/count
+
+### Recupera Auto per Nome
+GET http://127.0.0.1:5000/api/cars/Lancia%20Delta
+
+### Recupera Auto per Disponibilità (true)
+GET http://127.0.0.1:5000/api/cars?available=true
+
+### Recupera Auto per Disponibilità (false)
+GET http://127.0.0.1:5000/api/cars?available=false
+
+### Aggiorna Auto per ID
+PUT http://127.0.0.1:5000/api/cars/2
+Content-Type: application/json
+
+{    
+    "price": 43000.00,
+    "available": false
+}
+
+### Elimina tutte le auto
+DELETE http://127.0.0.1:5000/api/cars
+
+### Aggiungi auto in bulk
+POST http://127.0.0.1:5000/api/cars/bulk
+Content-Type: application/json
+
+[
+    {
+        "name": "Mazda CX-5",
+        "color": null,
+        "price": 35000.00,
+        "available": true
+    },
+    {
+        "name": "Tesla Model 3",
+        "color": "Black",
+        "price": 0,
+        "available": true
+    },
+    {
+        "name": "",
+        "color": "Blue",
+        "price": 12000.00,
+        "available": false
+    }
+]
