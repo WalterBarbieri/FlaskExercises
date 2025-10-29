@@ -12,6 +12,7 @@ class Car:
 
     def to_dict(self):
         return {
+            "id": self.id,
             "name": self.name,
             "color": self.color,
             "price": self.price,
